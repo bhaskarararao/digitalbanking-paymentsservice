@@ -28,7 +28,7 @@ public class PaymentServiceController {
 	{
 		  Customer customer=new Customer();
 		    customer.setCustomerId(customerId);
-		    List<Biller> listBiller=paymentservice.getBillers(customer);
+		    List<Biller> listBiller=paymentservice.findByCustomer(customer);
 		    return listBiller;
 	}
 	
