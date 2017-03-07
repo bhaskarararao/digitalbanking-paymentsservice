@@ -10,6 +10,6 @@ import com.capg.paymentservices.model.Customer;
 @Service
 public interface PaymentService {
 	
-	public List<Biller> getBillers(Customer customer);
+	public List<Biller> findByCustomer(Customer customer);
 	
 }
