@@ -32,7 +32,7 @@ public class Merchant implements Serializable{
 	private String provider;
 	
 	@OneToMany(mappedBy="merchants")
-	private List<Biller> billers;
+	private List<Biller> biller;
 
 	public int getMerchantId() {
 		return merchantId;
@@ -58,12 +58,12 @@ public class Merchant implements Serializable{
 		this.provider = provider;
 	}
 
-	public List<Biller> getBillers() {
-		return billers;
+	public List<Biller> getBiller() {
+		return biller;
 	}
 
-	public void setBillers(List<Biller> billers) {
-		this.billers = billers;
+	public void setBillers(List<Biller> biller) {
+		this.biller = biller;
 	}
 
 }
