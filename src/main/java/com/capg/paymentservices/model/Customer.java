@@ -34,7 +34,7 @@ public class Customer implements Serializable {
 	private String city;
 	
 	@Column(name="mobile_no")
-	private int mobileNo;
+	private Integer mobileNo;
 	
 	@Column(name="email_id")
 	private String emailId;
@@ -74,7 +74,7 @@ public class Customer implements Serializable {
 		this.city = city;
 	}
 	
-	public int getMobileNo() {
+	public Integer getMobileNo() {
 		return mobileNo;
 	}
 	
