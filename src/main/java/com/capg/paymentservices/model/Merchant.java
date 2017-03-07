@@ -31,7 +31,7 @@ public class Merchant implements Serializable{
 	@Column(name="service_provider")
 	private String provider;
 	
-	@OneToMany(mappedBy="merchants")
+	@OneToMany(mappedBy="merchant")
 	private List<Biller> biller;
 
 	public int getMerchantId() {
