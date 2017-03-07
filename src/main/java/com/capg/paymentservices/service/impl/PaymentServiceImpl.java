@@ -23,7 +23,7 @@ public class PaymentServiceImpl implements PaymentService {
 	
 
 	public List<Biller> getBillers(Customer customer) {
-		return paymentdao.findByCustomer(customer);
+		return paymentdao.findByBiller(customer);
 	}
 
 }
