@@ -13,5 +13,5 @@ import com.capg.paymentservices.model.Customer;
 @Transactional
 public interface PaymentDao extends CrudRepository<Biller,Long>
 {
-	public List<Biller> findByBiller(Customer customer);
+	public List<Biller> findByCustomer(Customer customer);
 }
