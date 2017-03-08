@@ -50,6 +50,7 @@ public class Biller implements Serializable {
 		this.billerId = billerId;
 	}
 
+	@JsonIgnore
 	public Customer getCustomer() {
 		return customer;
 	}
