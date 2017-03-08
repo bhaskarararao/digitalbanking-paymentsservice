@@ -13,6 +13,8 @@ import javax.persistence.Table;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Configuration
 @Component
 @Entity
@@ -59,6 +61,7 @@ public class Biller implements Serializable {
 		this.customer = customer;
 	}
 
+	@JsonIgnore
 	public Merchant getMerchant() {
 		return merchant;
 	}
