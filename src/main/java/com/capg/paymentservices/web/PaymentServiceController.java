@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.capg.paymentservices.model.Biller;
 import com.capg.paymentservices.model.Customer;
+import com.capg.paymentservices.model.Merchant;
 import com.capg.paymentservices.service.PaymentService;
 
 @RestController
@@ -31,6 +32,11 @@ public class PaymentServiceController {
 		    List<Biller> listBiller=paymentservice.findByCustomer(customer);
 		    return listBiller;
 	}
-	
+	@RequestMapping(value="/paymentservices/merchants",method = RequestMethod.GET)
+	public List<Merchant> getAllMerchantssForCustomer()
+	{
+		    List<Merchant> listMerchant=paymentservice.findAllMerchant();
+		    return listMerchant;
+	}
 	
 }

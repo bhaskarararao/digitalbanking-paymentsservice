@@ -7,9 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import com.capg.paymentservices.dao.MerchantDao;
 import com.capg.paymentservices.dao.PaymentDao;
 import com.capg.paymentservices.model.Biller;
 import com.capg.paymentservices.model.Customer;
+import com.capg.paymentservices.model.Merchant;
 import com.capg.paymentservices.service.PaymentService;
 
 @Component
@@ -21,9 +23,16 @@ public class PaymentServiceImpl implements PaymentService {
 	@Autowired
 	PaymentDao paymentdao;
 	
+	@Autowired
+	MerchantDao merchantdao;
+	
 
 	public List<Biller> findByCustomer(Customer customer) {
 		return paymentdao.findByCustomer(customer);
+	}
+	public List<Merchant> findAllMerchant()
+	{
+		return merchantdao.findAll();
 	}
 
 }
