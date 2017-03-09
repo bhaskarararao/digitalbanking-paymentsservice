@@ -31,7 +31,7 @@ public class PaymentServiceController {
 	
 	
 	
-	@RequestMapping(value="/accservices/addBiller"
+	@RequestMapping(value="/paymentservices/addBiller"
 			,method = RequestMethod.POST)
 	public Boolean addBiller(@RequestBody UserBillers userBiller) {
 		if(userBiller == null){
@@ -43,7 +43,7 @@ public class PaymentServiceController {
 
 	
 	
-	@RequestMapping(value="/accservices/removeBiller"
+	@RequestMapping(value="/paymentservices/removeBiller"
 			,method = RequestMethod.POST)
 	public Boolean removeBiller(@RequestBody UserBillers userBiller) {
 		if(userBiller == null){
@@ -55,7 +55,7 @@ public class PaymentServiceController {
 
 	
 	
-	@RequestMapping(value="/accservices/getBillersByUserId/{userId}"
+	@RequestMapping(value="/paymentservices/getBillersByUserId/{userId}"
 			,method = RequestMethod.GET)
 	public List<UserBillers> getBillersByUserId(@PathVariable String userId) {
 		if(userId == null){
@@ -67,7 +67,7 @@ public class PaymentServiceController {
 	
 	
 	
-	@RequestMapping(value="/accservices/addPayee"
+	@RequestMapping(value="/paymentservices/addPayee"
 			,method = RequestMethod.POST)
 	public Boolean addPayee(@RequestBody PayeeDetails payeeDetails) {
 		if(payeeDetails == null){
@@ -79,7 +79,7 @@ public class PaymentServiceController {
 
 	
 	
-	@RequestMapping(value="/accservices/removePayee"
+	@RequestMapping(value="/paymentservices/removePayee"
 			,method = RequestMethod.POST)
 	public Boolean removePayee(@RequestBody PayeeDetails payeeDetails) {
 		if(payeeDetails == null){
@@ -91,8 +91,8 @@ public class PaymentServiceController {
 
 	
 	
-	@RequestMapping(value="/accservices/getPayeeList/{userId}"
-			,method = RequestMethod.POST)
+	@RequestMapping(value="/paymentservices/getPayeeList/{userId}"
+			,method = RequestMethod.GET)
 	public List<PayeeDetails> findPayeeByUserId(@PathVariable String userId) {
 		if(userId == null){
 			logger.warn("userId is invalid");
@@ -103,7 +103,7 @@ public class PaymentServiceController {
 
 	
 	
-	@RequestMapping(value="/accservices/getAllBillers"
+	@RequestMapping(value="/paymentservices/getAllBillers"
 			,method = RequestMethod.GET)
 	public List<RegisteredBillers> getAllBillers() {
 		return paymentService.getAllBillers();
