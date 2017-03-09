@@ -86,7 +86,7 @@
 		<profile>
 			<id>dev</id>
 			<activation>
-				<activeByDefault>true</activeByDefault>
+				<activeByDefault>false</activeByDefault>
 				<property>
 					<name>env</name>
 					<value>dev</value>
@@ -103,12 +103,12 @@
 		</profile>
 		<!-- The configuration of the testing profile -->
 		<profile>
-			<id>test</id>
+			<id>docker</id>
 			<activation>
-				<activeByDefault>false</activeByDefault>
+				<activeByDefault>true</activeByDefault>
 				<property>
 					<name>env</name>
-					<value>test</value>
+					<value>docker</value>
 				</property>
 			</activation>
 			<properties>
@@ -117,7 +117,7 @@
 					file. Because the name of the directory that contains the configuration file 
 					of the testing profile is test, we must set the value of the build.profile.id 
 					property to test. -->
-				<build.profile.id>test</build.profile.id>
+				<build.profile.id>docker</build.profile.id>
 			</properties>
 		</profile>
 	</profiles>
