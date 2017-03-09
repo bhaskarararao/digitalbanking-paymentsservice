@@ -1,2 +1,0 @@
-# digitalbanking-paymentsservice
-digitalbanking-paymentsservice
